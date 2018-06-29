@@ -15,8 +15,8 @@ function dwwp_add_custom_metabox() {
 
 add_action( 'add_meta_boxes', 'dwwp_add_custom_metabox' );
 
-function dwwp_meta_callback( $post ) {
-	wp_nonce_field( basename( __FILE__ ), 'dwwp_jobs_nonce' );
+function dwwp_meta_callback( $post ) { // not clear
+	wp_nonce_field( basename( __FILE__ ), 'dwwp_jobs_nonce' ); 
 	$dwwp_stored_meta = get_post_meta( $post->ID ); ?>
 
 	<div>
@@ -27,7 +27,7 @@ function dwwp_meta_callback( $post ) {
 			<div class="meta-td">
 				<input type="text" class="dwwp-row-content" name="job_id" id="job-id"
 				value="<?php if ( ! empty ( $dwwp_stored_meta['job_id'] ) ) {
-					echo esc_attr( $dwwp_stored_meta['job_id'][0] );
+					echo esc_attr( $dwwp_stored_meta['job_id'][0] ); // not clear
 				} ?>"/>
 			</div>
 		</div>
@@ -55,7 +55,7 @@ function dwwp_meta_callback( $post ) {
 		<div class="meta-editor"></div>
 		<?php
 
-		$content = get_post_meta( $post->ID, 'principle_duties', true );
+		$content = get_post_meta( $post->ID, 'principle_duties', true ); // not clear
 		$editor = 'principle_duties';
 		$settings = array(
 			'textarea_rows' => 8,
@@ -90,7 +90,7 @@ function dwwp_meta_callback( $post ) {
 	          </textarea>
 	        </div>
 	    </div>
-	    <div class="meta-row">
+	    <div class="meta-row"><!-- not clear -->
 	        <div class="meta-th">
 	          <label for="relocation-assistance" class="dwwp-row-title"><?php _e( 'Relocation Assistance', 'wp-job-listing' ) ?></label>
 	        </div>

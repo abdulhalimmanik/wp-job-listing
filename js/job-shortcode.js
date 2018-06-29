@@ -7,5 +7,5 @@
 				editor.insertContent('WPExplorer.com is awesome!');
 			}
 		});
-	});
+	}); // not clear
 })();

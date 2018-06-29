@@ -8,5 +8,5 @@ jQuery(document).ready(function() {
 		id: 'preferred-requirements',
 		buttons: "em,strong,link,ul,li"
 	});
-
+	// not clear
 });

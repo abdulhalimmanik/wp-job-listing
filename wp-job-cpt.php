@@ -5,7 +5,7 @@ function dwwp_register_post_type() {
 	$singular = __( 'Job Listing' );
 	$plural = __( 'Job Listings' );
         //Used for the rewrite slug below.
-        $plural_slug = str_replace( ' ', '_', $plural );
+        $plural_slug = str_replace( ' ', '_', $plural ); // not clear
 
         //Setup all the labels to accurately reflect this post type.
 	$labels = array(
@@ -105,7 +105,7 @@ add_action( 'init', 'dwwp_register_taxonomy' );
 
 function dwwp_load_templates( $original_template ) {
 
-       if ( get_query_var( 'post_type' ) !== 'job' ) {
+       if ( get_query_var( 'post_type' ) !== 'job' ) { // not clear
 
                return;
 
@@ -136,7 +136,7 @@ function dwwp_load_templates( $original_template ) {
                }
 
        }else{
-       	return get_page_template();
+       	return get_page_template(); // not clear
        }
 
         return $original_template;

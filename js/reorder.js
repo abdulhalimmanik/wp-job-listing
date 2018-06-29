@@ -7,16 +7,16 @@ jQuery(document).ready(function($) {
 	sortList.sortable({
 
 		update: function( event, ui ) {
-			animation.show();
+			animation.show(); // not clear
 
 			$.ajax({
 				url: ajaxurl,
 				type: 'POST',
 				dataType: 'json',
 				data: {
-					action: 'save_sort',
-					order: sortList.sortable( 'toArray' ),
-					security: WP_JOB_LISTING.security
+					action: 'save_sort', // not clear
+					order: sortList.sortable( 'toArray' ), // not clear
+					security: WP_JOB_LISTING.security // not clear
 				},
 				success: function( response ) {
 					$( 'div#message' ).remove();

@@ -43,7 +43,7 @@ function dwwp_admin_enqueue_scripts() {
 			'security' => wp_create_nonce( 'wp-job-order' ),
 			'success' => __( 'Jobs sort order has been saved.' ),
 			'failure' => __( 'There was an error saving the sort order, or you do not have proper permissions.' )
-		) );
+		) ); // not clear
 
 	}
 

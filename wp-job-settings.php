@@ -51,7 +51,7 @@ function reorder_admin_jobs_callback() {
 
 function dwwp_save_reorder() {
 
-	if ( ! check_ajax_referer( 'wp-job-order', 'security' ) ) {
+	if ( ! check_ajax_referer( 'wp-job-order', 'security' ) ) { // not clear
 		return wp_send_json_error( 'Invalid Nonce' );
 	}
 
@@ -62,14 +62,14 @@ function dwwp_save_reorder() {
 	$order = $_POST['order'];
 	$counter = 0;
 
-	foreach( $order as $item_id ) {
+	foreach( $order as $item_id ) { // not clear
 
 		$post = array(
 			'ID' => (int)$item_id,
 			'menu_order' => $counter,
 		);
 
-		wp_update_post( $post );
+		wp_update_post( $post ); // not clear
 
 		$counter++;
 	}

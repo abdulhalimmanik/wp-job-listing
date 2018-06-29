@@ -47,7 +47,7 @@ function dwwp_list_job_by_location( $atts, $content = null ) {
                 'pagination' => 'off'
         ), $atts );
 
-	$pagination = $atts[ 'pagination' ]  == 'on' ? false : true;
+	$pagination = $atts[ 'pagination' ]  == 'on' ? false : true; // not clear
 	$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
     $args = array(
