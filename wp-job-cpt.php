@@ -143,7 +143,7 @@ function dwwp_load_templates( $original_template ) {
 
 
 }
-add_action( 'template_include', 'dwwp_load_templates' );
+add_filter( 'template_include', 'dwwp_load_templates' );
 
 
 
