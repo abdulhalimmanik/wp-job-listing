@@ -27,7 +27,7 @@ function dwwp_meta_callback( $post ) { // not clear
 			<div class="meta-td">
 				<input type="text" class="dwwp-row-content" name="job_id" id="job-id"
 				value="<?php if ( ! empty ( $dwwp_stored_meta['job_id'] ) ) {
-					echo esc_attr( $dwwp_stored_meta['job_id'][0] ); // not clear
+					echo esc_attr( $dwwp_stored_meta['job_id'][0] ); // not clear *
 				} ?>"/>
 			</div>
 		</div>
